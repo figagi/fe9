@@ -10,6 +10,9 @@ step1:
 
     git push  origin master
 
+    git remote -v
+
+
 http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html
 在本地配置ssh密钥
 ssh-keygen -t rsa -C "xxxxxx@yy.com"
