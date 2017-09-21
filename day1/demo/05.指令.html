@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <p v-if="seen">现在你看到我了</p>
+        <div :id="id">id的值为{{id}}</div>
+        <div :stark="msg">msg的值为{{msg}}</div>
+        <img :src="imgs" style="width:100px;">
+    </div>
+
+    <script>
+        let data = {
+            msg: "hello stark",
+            id: '00000',
+            seen: false,
+            imgs: 'https://cn.vuejs.org/images/logo.png'
+        }
+        let vm = new Vue({
+            el: "#box",
+            data: data
+        })
+    </script>
+</body>
+
+</html>

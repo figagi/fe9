@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        {{arr}}
+        <button v-on:click="show"> show</button>
+        <button v-on:mouseover="show"> 鼠标经过</button>
+        <button v-on:dblclick="show"> 鼠标双击</button>
+        <button v-on:click="add(5555)"> 向数组添加一个元素</button>
+        <button @click="add(5555)"> 向数组添加一个元素</button>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#box",
+            data: {
+                arr: ['12', '22', '45', '33']
+            },
+            methods: {
+                show: function() {
+                    console.log("调用了show方法")
+                },
+                add: function(data) {
+                    this.arr.push(data)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
