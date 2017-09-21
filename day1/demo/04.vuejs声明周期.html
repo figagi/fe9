@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 
+        生命周期
+        胚胎
+        出生
+        儿童
+        少年
+        青年
+        中年
+        老年
+        game over
+
+        一个生命从出生到死忙
+        cookie
+        vue
+        
+        https://github.com/vuejs/vue/blob/dev/src/core/instance/index.js
+    -->
+
+    <div id="app">
+        {{msg}}
+        <button id="btn">shudong</button>
+        <button onclick="change()">更新 </button>
+        <button onclick="destroy()">销毁 </button>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                msg: "hello stark",
+            },
+            beforeCreate() {
+                alert("实例创建前")
+            },
+            created() {
+                alert("实例已经创建完成")
+            },
+            beforeMount() {
+                alert("实例挂载前")
+            },
+            mounted() {
+                alert("实例已经挂载")
+                $("#btn").click(function() {
+                    alert("快下课吧，我饿死了！")
+                })
+            },
+            beforeUpdate() {
+                alert("数据更新前")
+            },
+            updated() {
+                alert("数据已经更改")
+            },
+            beforeDestroy() {
+                alert("实例销毁前")
+            },
+            destroyed() {
+                alert(实例已经销毁)
+            }
+
+        })
+
+        function change() {
+            vm.msg = "shudong";
+        }
+
+        function destroy() {
+            vm.$destroy();
+        }
+    </script>
+</body>
+
+</html>
