@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="div">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <stark>
+            <div slot="three">
+                我想替换第三个位置
+            </div>
+            <div slot="two">
+                我想替换第二个位置
+            </div>
+            <div slot="one">
+                我想替换第一个位置
+            </div>
+            <div>
+                我是一个不替换的slot标签，哈哈哈，你咬我啊！
+            </div>
+
+        </stark>
+    </div>
+    <script>
+        Vue.component("stark", {
+            template: `
+           <div> 
+            <span> 首页</span>
+               <slot name="one"> <p> 第一个位置 </p> </slot>
+               <slot name="two"> <p> 第二个位置 </p> </slot>
+               <slot name="three"> <p> 第三个位置 </p> </slot>   
+               <slot> 我就咬你啊 </slot>
+               啊哈哈哈撒旦撒大
+           </div>
+           `
+        })
+
+        let c1 = new Vue({
+            el: '#box'
+
+        })
+
+        // let c2 = new Vue({
+        //     el: '#box'
+        // })
+    </script>
+</body>
+
+</html>

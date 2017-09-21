@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <stark> </stark>
+    </div>
+    <div id="box2">
+        <stark> </stark>
+    </div>
+    <script>
+        Vue.component('stark', {
+            data: function() {
+                return {
+                    shwos: false
+                }
+            },
+            template: `
+            <div>
+             <h1> stark wang </h1>
+            </di>
+            `
+        })
+
+        new Vue({
+            el: "#box"
+        })
+
+        new Vue({
+            el: "#box2"
+        })
+    </script>
+</body>
+
+</html>

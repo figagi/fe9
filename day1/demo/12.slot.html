@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <shudong>
+            <div>
+                我是一个内容
+            </div>
+        </shudong>
+    </div>
+
+    <template id="aaa">
+        <div>
+            <slot>
+                ul-slot  位置
+            </slot>
+            <h1>
+                slot 开始
+            </h1>
+            
+        </div>
+    </template>
+
+    <script>
+        let vm = new Vue({
+            el: "#box",
+            data: {
+                a: 'aaa'
+            },
+            components: {
+                'shudong': {
+                    template: '#aaa'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
