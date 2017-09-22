@@ -37,3 +37,7 @@
     最后上线
     在Linux 那个nginx
     解决不同端口跨域
+
+课程视频永久地址
+如果地址改变，请记得来这里看哦
+链接: https://pan.baidu.com/s/1hsOThas 密码: rtbu
