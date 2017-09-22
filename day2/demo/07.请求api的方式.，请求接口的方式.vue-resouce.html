@@ -12,22 +12,32 @@
 
 <body>
     <div id="box">
-        <input type="text" v-model="word" @keyup="get()">
+
+        github:ID: <input type="text" v-model="uid">
+        <button @click="getGitUser(uid)">获取指定的github帐号信息并且显示</button> 性名：{{user.name}}
+        <br> 头像：
+        <img :src="user.avatar_url" style="width:200px">
+
+        <input type="text" v-model="word" @keyup="jsonp()">
         <ul>
             <li v-for="item in myData">
                 {{item}}
             </li>
         </ul>
+
+
     </div>
     <script>
         new Vue({
             el: '#box',
             data: {
                 word: '',
-                myData: []
+                myData: [],
+                user: {},
+                uid: ''
             },
             methods: {
-                get: function() {
+                jsonp: function() {
                     console.log(11)
                     this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su", {
                         params: {
@@ -37,6 +47,13 @@
                     }).then(function(res) {
                         this.myData = res.data.s;
                     })
+                },
+                getGitUser: function(uid) {
+                    this.$http.get(`https://api.github.com/users/${uid}`)
+                        .then(res => {
+                            console.log(res)
+                            this.user = res.data;
+                        })
                 }
             }
         })
