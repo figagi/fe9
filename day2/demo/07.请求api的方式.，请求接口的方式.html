@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <input type="text" v-model="word" @keyup="get()">
+        <ul>
+            <li v-for="item in myData">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#box',
+            data: {
+                word: '',
+                myData: []
+            },
+            methods: {
+                get: function() {
+                    console.log(11)
+                    this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su", {
+                        params: {
+                            wd: this.word
+                        },
+                        jsonp: 'cb'
+                    }).then(function(res) {
+                        this.myData = res.data.s;
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
