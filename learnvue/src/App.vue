@@ -3,6 +3,7 @@
     <router-link to="/" tag="li" exact> 首页 </router-link>
     <router-link to="/work" tag="div" active-class="starkwang"> <a> 工作页面</a> </router-link>
     <router-link to="/study" > <a> 学习页面</a> </router-link>
+    <router-link to="/about" > <a> 关于我</a> </router-link>
 
     <!-- <a href="/">首页</a>
     <a href="/work">工作页面</a>
@@ -32,5 +33,8 @@ export default {
 }
 .starkwang{
   background-color: blue;
+}
+.shudong{
+  background-color: yellowgreen;
 }
 </style>
