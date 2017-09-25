@@ -2,12 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import About from '@/components/About'
+import Blog from '@/views/blog/index'
+import Daily from '@/views/daily/index'
 
 Vue.use(Router)
 
 const Study = { template: '<div>我是学习的页面</div>' }
 const Work = { template: '<div>我是工作的页面</div>' }
-const Blog = { template: '<div>我的博客页面</div>' }
+    // const Blog = { template: '<div>我的博客页面</div>' }
 const Info = { template: '<div>我的信息页面</div>' }
 
 const UserHome = { template: '<div>Home</div>' }
@@ -22,6 +24,14 @@ export default new Router({
             path: '/',
             name: 'Hello',
             component: Hello
+        }, {
+            path: '/daily',
+            name: 'Daily',
+            component: Daily
+        }, {
+            path: '/blog',
+            name: 'Blog',
+            component: Blog
         }, {
             path: '/study',
             name: 'Study',

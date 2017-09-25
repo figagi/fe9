@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <router-link to="/" tag="li" exact> 首页 </router-link>
+    <router-link to="/daily" tag="div" active-class="starkwang"> <a> 知乎日报</a> </router-link>
+    <router-link to="/blog" tag="div" active-class="starkwang"> <a> 博客</a> </router-link>
     <router-link to="/work" tag="div" active-class="starkwang"> <a> 工作页面</a> </router-link>
     <router-link to="/study" > <a> 学习页面</a> </router-link>
     <router-link to="/about" > <a> 关于我</a> </router-link>
