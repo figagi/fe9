@@ -8,8 +8,3 @@ http://bbs.shudong.wang/forum.php?mod=forumdisplay&fid=2
 参考实例
 http://naotu.baidu.com/file/4cbe9072bd27c2667a6dacb13ff4d40c?token=1213eb22a883dc49
 
-日报：
-    讲课内容：
-    vue初识，插值，双向绑定，vuejs生命周期，常用指令，v-on,v-show等，template模版，render渲染，class动态绑定，slot插槽分发，slot指定替换位置，在项目中的使用场景，组件编写方式，全局组件，动态组件，props。
-    和学生沟通反馈：
-        基本上都能跟上，节奏再慢一点。
