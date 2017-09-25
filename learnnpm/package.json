@@ -1,0 +1,17 @@
+{
+  "name": "learnnpm",
+  "version": "1.0.0",
+  "description": "谁下载谁怀孕",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shudong"
+  ],
+  "author": "starkwang",
+  "license": "ISC",
+  "devDependencies": {
+    "shudong-test": "^1.0.0"
+  }
+}
