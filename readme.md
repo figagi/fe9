@@ -40,4 +40,5 @@
 
 课程视频永久地址
 如果地址改变，请记得来这里看哦
-链接: https://pan.baidu.com/s/1hsOThas 密码: rtbu
+教程视频地址：
+链接: https://pan.baidu.com/s/1qXB5BkS 密码: 6nru
